@@ -27,7 +27,7 @@ To design a comprehensive, visual analytics solution that highlights regional ag
 - Analyzed variations in production across crops and regions
 
 ### 📎 Dashboard Preview
-*(Add relevant screenshots or GIFs of your dashboard here)*
+*Added in the Separate folder*
 
 ### 👤 Author
 Passionate about turning data into actionable insights
