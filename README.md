@@ -30,5 +30,4 @@ To design a comprehensive, visual analytics solution that highlights regional ag
 *(Add relevant screenshots or GIFs of your dashboard here)*
 
 ### 👤 Author
-Prajwal Pratap Yadav
 Passionate about turning data into actionable insights
