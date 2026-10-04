@@ -1,0 +1,51 @@
+{
+  "source_git_sha": "22ba4abaf20862aa3fba35d49a9b175a15b6b3de",
+  "quickstart": {
+    "source_git_sha": "22ba4abaf20862aa3fba35d49a9b175a15b6b3de",
+    "seconds": 35.315,
+    "commands": [
+      "git clone --branch portfolio-overhaul ...",
+      "cd ... && make setup",
+      "make run"
+    ],
+    "cache": "New empty pip/uv cache directories; pip caching disabled; network/proxy/OS caches uncontrolled.",
+    "scope": "Final bounded-input implementation on public reviewed branch, same three-command sequence with branch selection. Default main confirmation follows merge.",
+    "python": "3.12.14",
+    "passed_60_second_gate": true,
+    "rows": 19689
+  },
+  "developer_verification_seconds": 50.972,
+  "developer_verification_scope": "Clean public checkout and new venv; full developer tools may reuse host download caches. All documented required Make targets verified, model catalog and deterministic exports agree.",
+  "ten_second_gate": {
+    "verdict": "self-review pass",
+    "scope": "Title/tagline and real figure immediately convey crop quality audit and uncertain-unit limits; badges/hero load on GitHub. No external reader study or measured human comprehension."
+  },
+  "five_minute_gate": {
+    "verdict": "self-review pass",
+    "scope": "Structure, typed ETL, preserved originals, granular owner history, tests/CI/source licence and limits inspected; automated full developer verification 50.972s. No external hiring-manager study."
+  },
+  "github_render": {
+    "hero_loaded": true,
+    "four_badges_loaded": true,
+    "mermaid_nodes": 7,
+    "mermaid_rendered": true,
+    "ci_badge_note": "Main workflow has not run before merge; status image may display no status until main/camo refresh."
+  },
+  "skeptic_fixes": [
+    "Verified matching data licence and added separate data attribution/ShareAlike.",
+    "Retained reported yield and fractional area; no universal tonne assumption or causal ranking.",
+    "Recorded two exact relative-tolerance cases rather than concealing float/decimal differences.",
+    "Removed heavy kernel dependencies; notebook runner executes actual ordinary Python cells and labels its mode.",
+    "Used supported mypy AST parser after observed sandbox process-affinity failure.",
+    "Created scanner output folder after actual clean-CI failure; clean security check passes.",
+    "Rejected extreme finite numeric input before overflow; added meaningful bounds tests.",
+    "Pinned actual verified Python microversions and all dependencies; source/env/coverage scope explicit."
+  ],
+  "remaining": [
+    "Manual Power BI Desktop refresh/render/measure output validation.",
+    "Primary per-crop unit, yield-weighting and historical-boundary lineage.",
+    "Repository administration metadata/social preview/pins.",
+    "Other-platform and external-reader evaluation."
+  ],
+  "scientific_accuracy_or_power_bi_output_certified": false
+}

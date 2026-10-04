@@ -1,0 +1,21 @@
+{
+  "url": "https://www.kaggle.com/api/v1/datasets/download/akshatgupta7/crop-yield-in-indian-states-dataset",
+  "checked_utc": "2026-10-04",
+  "archive_sha256": "cd3219952b559b9dfb960410e721de06461118b081d0b43b2b3df0eb61889099",
+  "files": [
+    {
+      "name": "crop_yield.csv",
+      "bytes": 1620945,
+      "sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f"
+    }
+  ],
+  "title": "Agricultural Crop Yield in Indian States Dataset",
+  "creator": "Akshat Gupta (akshatgupta7)",
+  "source_url": "https://www.kaggle.com/datasets/akshatgupta7/crop-yield-in-indian-states-dataset",
+  "metadata_url": "https://www.kaggle.com/api/v1/datasets/view/akshatgupta7/crop-yield-in-indian-states-dataset",
+  "source_version": 1,
+  "source_updated_utc": "2023-07-17T07:39:37.27Z",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "upstream_government_origin_verified": false
+}

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling==1.32.4", "editables==0.5"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crop-quality-audit"
+version = "0.1.0"
+description = "Reproducible arithmetic and coverage audit beside an original crop Power BI report"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Prajwal Pratap Yadav", email = "prajwalpratapyadav5@gmail.com"}]
+dependencies = []
+
+[project.scripts]
+crop-audit = "etl.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+  "ruff==0.16.10", "black==26.5.1", "mypy==2.4.0", "pytest==9.1.1", "pytest-cov==7.1.0",
+  "matplotlib==3.11.2", "nbformat==5.11.1",
+  "build==1.6.1", "pip-audit==2.10.1", "pre-commit==4.6.2",
+]
+
+[project.urls]
+Repository = "https://github.com/Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI"
+Issues = "https://github.com/Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/etl"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "tests/", "scripts/", "configs/", "docs/", "reports/", "notebooks/", "README.md", "LICENSE", "CHANGELOG.md", "Makefile", "pyproject.toml", "requirements*.txt", "data/LICENSE.md", "data/source-receipt.json", "data/raw/crop_yield.csv", "powerbi/original/"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/etl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["etl"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90

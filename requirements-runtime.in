@@ -1,0 +1,5 @@
+# Pinned build/bootstrap tools; the audit has no third-party runtime dependencies.
+hatchling==1.32.4
+editables==0.5
+pip==26.2.1
+uv==0.12.23

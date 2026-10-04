@@ -1,0 +1,17 @@
+name: Evidence or feature proposal
+description: Propose a scoped improvement with a verifiable acceptance criterion.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and supporting source/evidence
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Proposed behavior, tests and limitations
+      description: Distinguish report output confirmation from read-only metadata or Python calculations.
+    validations:
+      required: true

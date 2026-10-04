@@ -1,0 +1,51 @@
+{
+  "boundary_review_rows": 141,
+  "crops": 55,
+  "csv_area_sum_diagnostic": "3542574242.797",
+  "fractional_area_rows": 235,
+  "maximum_year": 2020,
+  "minimum_year": 1997,
+  "ratio_check_pass": 9972,
+  "ratio_mismatch_percent": "49.35",
+  "ratio_mismatches": 9717,
+  "row_weighted_pesticide_average": "48848.35339200924374015947991",
+  "row_weighted_rainfall_average": "1437.755176615968307176596069",
+  "rows": 19689,
+  "seasons": 6,
+  "state_labels": 30,
+  "telangana_before_2014_rows": 60,
+  "top_crops_by_row_count": [
+    {
+      "crop": "Rice",
+      "rows": 1197
+    },
+    {
+      "crop": "Maize",
+      "rows": 975
+    },
+    {
+      "crop": "Moong(Green Gram)",
+      "rows": 740
+    },
+    {
+      "crop": "Urad",
+      "rows": 733
+    },
+    {
+      "crop": "Groundnut",
+      "rows": 725
+    },
+    {
+      "crop": "Sesamum",
+      "rows": 685
+    },
+    {
+      "crop": "Potato",
+      "rows": 628
+    },
+    {
+      "crop": "Sugarcane",
+      "rows": 605
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+name: Reproducibility defect
+description: Report a rejected input, inconsistent export or broken documented command.
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Exact command and expected versus observed result
+      description: Include repository/version, Python/OS and a synthetic fixture or public checksum. Do not upload secrets or private data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Safe evidence
+      description: Relevant policy/hash, error output and which validation rule differs.
+    validations:
+      required: true

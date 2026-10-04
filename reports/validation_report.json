@@ -1,0 +1,1180 @@
+{
+  "absolute_tolerance": "0.01",
+  "boundary_review_rows": 141,
+  "changes": "Trimmed labels; mapped aliases; retained reported yields; added ratio/flags; sorted rows.",
+  "cleaned_rows": 19689,
+  "coverage": {
+    "Andhra Pradesh": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Arunachal Pradesh": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Assam": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Bihar": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Chhattisgarh": {
+      "missing_dataset_years": [
+        1997,
+        1998,
+        1999,
+        2020
+      ],
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Delhi": {
+      "missing_dataset_years": [
+        1997,
+        2020
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Goa": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Gujarat": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Haryana": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Himachal Pradesh": {
+      "missing_dataset_years": [
+        1997,
+        2020
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Jammu and Kashmir": {
+      "missing_dataset_years": [
+        1998,
+        2020
+      ],
+      "years": [
+        1997,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Jharkhand": {
+      "missing_dataset_years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2020
+      ],
+      "years": [
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Karnataka": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Kerala": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Madhya Pradesh": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Maharashtra": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Manipur": {
+      "missing_dataset_years": [
+        2019,
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ]
+    },
+    "Meghalaya": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Mizoram": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Nagaland": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Odisha": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Puducherry": {
+      "missing_dataset_years": [
+        1997,
+        2020
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Punjab": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Sikkim": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Tamil Nadu": {
+      "missing_dataset_years": [
+        1997,
+        2020
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Telangana": {
+      "missing_dataset_years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2020
+      ],
+      "years": [
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Tripura": {
+      "missing_dataset_years": [
+        1997,
+        2020
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Uttar Pradesh": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "Uttarakhand": {
+      "missing_dataset_years": [
+        1997,
+        1998,
+        1999
+      ],
+      "years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ]
+    },
+    "West Bengal": {
+      "missing_dataset_years": [
+        2020
+      ],
+      "years": [
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    }
+  },
+  "crop_counts": {
+    "Arecanut": {
+      "mismatch_rows": 74,
+      "rows": 162
+    },
+    "Arhar/Tur": {
+      "mismatch_rows": 249,
+      "rows": 508
+    },
+    "Bajra": {
+      "mismatch_rows": 236,
+      "rows": 524
+    },
+    "Banana": {
+      "mismatch_rows": 95,
+      "rows": 245
+    },
+    "Barley": {
+      "mismatch_rows": 120,
+      "rows": 297
+    },
+    "Black pepper": {
+      "mismatch_rows": 51,
+      "rows": 126
+    },
+    "Cardamom": {
+      "mismatch_rows": 45,
+      "rows": 74
+    },
+    "Cashewnut": {
+      "mismatch_rows": 77,
+      "rows": 134
+    },
+    "Castor seed": {
+      "mismatch_rows": 157,
+      "rows": 300
+    },
+    "Coconut": {
+      "mismatch_rows": 91,
+      "rows": 172
+    },
+    "Coriander": {
+      "mismatch_rows": 98,
+      "rows": 199
+    },
+    "Cotton(lint)": {
+      "mismatch_rows": 239,
+      "rows": 476
+    },
+    "Cowpea(Lobia)": {
+      "mismatch_rows": 54,
+      "rows": 134
+    },
+    "Dry chillies": {
+      "mismatch_rows": 198,
+      "rows": 419
+    },
+    "Garlic": {
+      "mismatch_rows": 126,
+      "rows": 250
+    },
+    "Ginger": {
+      "mismatch_rows": 154,
+      "rows": 323
+    },
+    "Gram": {
+      "mismatch_rows": 233,
+      "rows": 490
+    },
+    "Groundnut": {
+      "mismatch_rows": 391,
+      "rows": 725
+    },
+    "Guar seed": {
+      "mismatch_rows": 29,
+      "rows": 63
+    },
+    "Horse-gram": {
+      "mismatch_rows": 175,
+      "rows": 371
+    },
+    "Jowar": {
+      "mismatch_rows": 262,
+      "rows": 513
+    },
+    "Jute": {
+      "mismatch_rows": 74,
+      "rows": 181
+    },
+    "Khesari": {
+      "mismatch_rows": 40,
+      "rows": 75
+    },
+    "Linseed": {
+      "mismatch_rows": 133,
+      "rows": 308
+    },
+    "Maize": {
+      "mismatch_rows": 512,
+      "rows": 975
+    },
+    "Masoor": {
+      "mismatch_rows": 166,
+      "rows": 324
+    },
+    "Mesta": {
+      "mismatch_rows": 96,
+      "rows": 210
+    },
+    "Moong(Green Gram)": {
+      "mismatch_rows": 396,
+      "rows": 740
+    },
+    "Moth": {
+      "mismatch_rows": 66,
+      "rows": 110
+    },
+    "Niger seed": {
+      "mismatch_rows": 117,
+      "rows": 192
+    },
+    "Oilseeds total": {
+      "mismatch_rows": 17,
+      "rows": 29
+    },
+    "Onion": {
+      "mismatch_rows": 177,
+      "rows": 454
+    },
+    "Other  Rabi pulses": {
+      "mismatch_rows": 160,
+      "rows": 355
+    },
+    "Other Cereals": {
+      "mismatch_rows": 79,
+      "rows": 146
+    },
+    "Other Kharif pulses": {
+      "mismatch_rows": 171,
+      "rows": 382
+    },
+    "Other Summer Pulses": {
+      "mismatch_rows": 2,
+      "rows": 10
+    },
+    "Peas & beans (Pulses)": {
+      "mismatch_rows": 166,
+      "rows": 369
+    },
+    "Potato": {
+      "mismatch_rows": 317,
+      "rows": 628
+    },
+    "Ragi": {
+      "mismatch_rows": 280,
+      "rows": 498
+    },
+    "Rapeseed &Mustard": {
+      "mismatch_rows": 299,
+      "rows": 528
+    },
+    "Rice": {
+      "mismatch_rows": 542,
+      "rows": 1197
+    },
+    "Safflower": {
+      "mismatch_rows": 92,
+      "rows": 169
+    },
+    "Sannhamp": {
+      "mismatch_rows": 74,
+      "rows": 160
+    },
+    "Sesamum": {
+      "mismatch_rows": 388,
+      "rows": 685
+    },
+    "Small millets": {
+      "mismatch_rows": 234,
+      "rows": 485
+    },
+    "Soyabean": {
+      "mismatch_rows": 165,
+      "rows": 349
+    },
+    "Sugarcane": {
+      "mismatch_rows": 305,
+      "rows": 605
+    },
+    "Sunflower": {
+      "mismatch_rows": 250,
+      "rows": 441
+    },
+    "Sweet potato": {
+      "mismatch_rows": 92,
+      "rows": 273
+    },
+    "Tapioca": {
+      "mismatch_rows": 111,
+      "rows": 201
+    },
+    "Tobacco": {
+      "mismatch_rows": 206,
+      "rows": 364
+    },
+    "Turmeric": {
+      "mismatch_rows": 151,
+      "rows": 337
+    },
+    "Urad": {
+      "mismatch_rows": 413,
+      "rows": 733
+    },
+    "Wheat": {
+      "mismatch_rows": 201,
+      "rows": 545
+    },
+    "other oilseeds": {
+      "mismatch_rows": 71,
+      "rows": 126
+    }
+  },
+  "csv_sha256": {
+    "cleaned.csv": "7a8512efd5bf28881b1b866ac7bcd41f8d2093fbfe77a4d6550ce8971cf89a7b",
+    "ratio_check_pass.csv": "9d77cd5ffebce3620dee1bcd743f88e75069a079bda8a78c53eb8a4d03846ef1",
+    "ratio_mismatches.csv": "b24d9b2ce5c5a7d50b09895e9b08d032b4ab2854c49157657c25a3e92828b654"
+  },
+  "data_creator": "Akshat Gupta (akshatgupta7)",
+  "data_license": "CC BY-SA 4.0",
+  "data_source_url": "https://www.kaggle.com/datasets/akshatgupta7/crop-yield-in-indian-states-dataset",
+  "distinct_crops": 55,
+  "distinct_seasons": 6,
+  "distinct_state_labels": 30,
+  "dropped_rows": 0,
+  "input_rows": 19689,
+  "interpretation": "Arithmetic flags do not establish measurement accuracy or per-crop physical units.",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "policy_sha256": "9a9b17d2757663c6b160752d1829e2aa09c80d690edb24e0add29cc6e13acf98",
+  "ratio_check_pass_rows": 9972,
+  "ratio_mismatch_percent": 49.35243029102545,
+  "ratio_mismatch_rows": 9717,
+  "ratio_policy": "abs(reported-calculated) <= max(abs_tol, rel_tol*max(abs(reported),abs(calculated)))",
+  "relative_tolerance": "0.05",
+  "source_sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f",
+  "state_alias_rows": 0,
+  "trimmed_label_rows": 19689,
+  "years": [
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ]
+}

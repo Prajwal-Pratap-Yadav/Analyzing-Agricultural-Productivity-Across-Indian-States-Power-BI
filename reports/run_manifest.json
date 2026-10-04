@@ -1,0 +1,23 @@
+{
+  "data_sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f",
+  "dirty_source_tree": false,
+  "generated_at_utc": "2026-10-04T07:03:06.139538+00:00",
+  "generated_sha256": {
+    "docs/assets/data-quality.png": "27850cebbf09004d8eabfb8cad19b7c8f115316757b2376ebd3d036c840189fa",
+    "docs/data-dictionary.md": "a3ce43449f980ea0e312e9c86716bceccaeed953c33e81913842b16d4e0fabfb",
+    "docs/insights.md": "415504dcf624f0a35eb78b99b0961b83dd462eb50c4be990aa316788f80d5d43",
+    "reports/insights.json": "c9e6ee8d3ebba844754214268cdd019d1730812f721288faa1e83147888a748f",
+    "reports/validation_report.json": "e4bacc980a9ce644cdb6ad9e1a5a832768458652566e5ddd1b629d969a107596"
+  },
+  "limitations": "Read-only model metadata and Python diagnostics; no Power BI refresh, output validation or rendering.",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "policy_sha256": "9a9b17d2757663c6b160752d1829e2aa09c80d690edb24e0add29cc6e13acf98",
+  "processor": "x86_64",
+  "python": "3.12.14",
+  "seed": "none; deterministic arithmetic",
+  "source_git_sha": "22ba4abaf20862aa3fba35d49a9b175a15b6b3de",
+  "versions": {
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1"
+  }
+}
