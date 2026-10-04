@@ -1,0 +1,22 @@
+[
+  {
+    "path": "Analysing Agricultural Productivity.pbix",
+    "bytes": 1042871,
+    "sha256": "84c142e6dd8905e9b7e81c29af21878669594fb9b90537162638ca0f8b34a7ba"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1077,
+    "sha256": "4aae2fc6f9d5f27cf556519461713d508e8d3f91bc2df951ebcbeb18670f0726"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1471,
+    "sha256": "d3cbd0ec81db2b6fee351de042722f1e213d0487e2df731b6c39e2f7cf4f0e81"
+  },
+  {
+    "path": "crop_yield.csv",
+    "bytes": 1620945,
+    "sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f"
+  }
+]
