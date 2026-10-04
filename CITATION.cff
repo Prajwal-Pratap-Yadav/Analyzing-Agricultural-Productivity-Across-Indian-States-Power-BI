@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Cite the audit software and separately credit the Kaggle source dataset."
+title: "Crop Data Quality Audit"
+version: 0.1.0
+date-released: 2026-10-04
+type: software
+license: MIT
+authors:
+  - family-names: "Yadav"
+    given-names: "Prajwal Pratap"
+repository-code: "https://github.com/Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI"
+references:
+  - type: data
+    title: "Agricultural Crop Yield in Indian States Dataset"
+    authors:
+      - family-names: "Gupta"
+        given-names: "Akshat"
+    version: "1"
+    date-released: 2023-07-17
+    url: "https://www.kaggle.com/datasets/akshatgupta7/crop-yield-in-indian-states-dataset"
+    license: CC-BY-SA-4.0
