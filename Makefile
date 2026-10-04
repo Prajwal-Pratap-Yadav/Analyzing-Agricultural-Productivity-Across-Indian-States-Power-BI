@@ -54,6 +54,7 @@ audit:
 	.venv/bin/pip-audit --disable-pip --no-deps -r requirements-runtime.txt -r requirements-dev.txt
 
 security:
+	mkdir -p reports/local
 	$(PY) scripts/install_gitleaks.py
 	.tools/gitleaks git --redact --report-format=json --report-path=reports/local/history-secrets.json
 	$(MAKE) audit
