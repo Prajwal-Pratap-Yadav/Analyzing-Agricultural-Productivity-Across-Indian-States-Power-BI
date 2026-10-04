@@ -1,0 +1,125 @@
+name: Crop audit quality
+on:
+  push:
+    branches: [main, portfolio-overhaul]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: crop-audit-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: 'requirements*.txt'
+      - run: make setup-dev lint typecheck test run reproduce docs build
+      - name: Verify committed deterministic profiles
+        run: git diff --exit-code -- reports/validation_report.json reports/insights.json docs/data-dictionary.md docs/insights.md
+      - run: .venv/bin/python scripts/ci_manifest.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: crop-verification-${{ matrix.python }}
+          path: |
+            reports/local/
+            reports/run_manifest.json
+            notebooks/01_etl.ipynb
+          if-no-files-found: error
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-inspect.txt
+      - run: make setup setup-inspect inspect
+  security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: 'requirements*.txt'
+      - run: make setup-dev security
+  community:
+    if: github.event_name == 'push' && github.repository == 'Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/portfolio-overhaul')
+    needs: [verify, inspect, security]
+    permissions:
+      contents: read
+      issues: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - run: python scripts/release_community.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+  release:
+    if: github.event_name == 'push' && github.repository == 'Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI' && github.ref == 'refs/heads/main'
+    needs: [verify, inspect, security, community]
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: 'requirements*.txt'
+      - run: make setup-dev reproduce build
+      - run: .venv/bin/python scripts/package_release.py
+      - name: Tag exact verified main and publish preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          write_ok() { test "$GITHUB_REPOSITORY" = 'Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI'; test "$GITHUB_REF" = 'refs/heads/main'; }
+          write_ok
+          version=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")
+          tag="v$version"
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+          git config user.name 'Prajwal Pratap Yadav'
+          git config user.email 'prajwalpratapyadav5@gmail.com'
+          if git rev-parse "$tag^{commit}" >/dev/null 2>&1; then
+            test "$(git rev-parse "$tag^{commit}")" = "$GITHUB_SHA"
+          else
+            git tag -a "$tag" "$GITHUB_SHA" -m "Crop data quality audit $version engineering preview"
+            write_ok
+            git push origin "refs/tags/$tag"
+          fi
+          if gh release view "$tag" --repo Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI >/dev/null 2>&1; then
+            echo 'Release already attached to the verified tag.'
+          else
+            write_ok
+            gh release create "$tag" --repo Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI --verify-tag --prerelease --title "Crop data quality audit $version engineering preview" --notes-file docs/RELEASE.md reports/local/release/*.whl reports/local/release/*.tar.gz reports/local/release/*.zip reports/local/release/SHA256SUMS
+          fi
