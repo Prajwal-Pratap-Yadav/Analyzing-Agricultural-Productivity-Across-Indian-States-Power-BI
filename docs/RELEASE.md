@@ -1,0 +1,9 @@
+Crop Data Quality Audit 0.1.0 is an engineering preview beside the preserved original agricultural Power BI report.
+
+Python 3.11/3.12 on Linux runs the dependency-free audit. Clone the tagged repository, run `make setup`, then `make run`. Alternatively install the wheel and run `crop-audit --demo --output demo-output`; that three-row fixture tests packaging and is explicitly synthetic. Use `make setup-dev reproduce` for real-source charts, generated notes and executed plain-Python notebook cells. Python 3.12 plus `make setup-inspect inspect` reproduces the read-only model catalog.
+
+The evidence ZIP contains original CSV/report bytes, source receipt and licence/attribution, deterministic processed tables, validation/profile results, chart/notebook and extracted model metadata. Code is MIT. The real source dataset and its distributed adaptations/figures use CC BY-SA 4.0, credited to Akshat Gupta; retain the included data notice and modification history. The sdist also includes these original attributable inputs. Verify SHA256SUMS before use. release-source.json identifies the exact main commit.
+
+Measured source results: 19,689 rows retained; 9,717 decimal ratio mismatches; 235 source fractional areas changed in the original integer cache; 141 boundary-review flags. Passing the ratio tolerance is not an agronomic accuracy certification.
+
+Known limits: primary government lineage, crop-unit definitions, reported-yield weighting and historical boundary harmonization remain unverified. Original PBIX source path and behavior remain unchanged. No Power BI Desktop refresh, rendering, DAX-engine output validation, causal insight or cross-crop productivity ranking is claimed. Optional inspection only reads the model. Windows/macOS UI behavior and an external reader study are unverified. Roadmap issues #1–#3 define the outstanding report/provenance/PBIP work.
