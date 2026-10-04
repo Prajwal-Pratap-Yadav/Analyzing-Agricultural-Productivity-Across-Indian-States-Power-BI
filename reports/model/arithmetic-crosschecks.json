@@ -1,0 +1,19 @@
+{
+  "cached_area_sum_diagnostic": 3542574244,
+  "cached_rows": 19689,
+  "count_nonblank_rows": 19689,
+  "csv_area_sum_diagnostic": "3542574242.797",
+  "csv_rows": 19689,
+  "distinct_crop_labels_trimmed": 55,
+  "distinct_seasons_trimmed": 6,
+  "distinct_state_labels_trimmed": 30,
+  "distinct_years": 24,
+  "fractional_area_values_changed_in_cache": 235,
+  "identical_label_grains": true,
+  "limitations": "No DAX engine, report interaction, visual result or rendering was executed. Inline aliases may differ from display labels. Means are weighted by source rows, not a national weather/pesticide estimate. No cross-crop production or yield totals are interpreted.",
+  "row_weighted_pesticide_average_cached": 48848.353392009245,
+  "row_weighted_pesticide_average_csv": "48848.35339200924374015947991",
+  "row_weighted_rainfall_average_cached": 1437.7551766159681,
+  "row_weighted_rainfall_average_csv": "1437.755176615968307176596069",
+  "scope": "Python arithmetic on unfiltered CSV and decoded cached table; not validated against Power BI output."
+}

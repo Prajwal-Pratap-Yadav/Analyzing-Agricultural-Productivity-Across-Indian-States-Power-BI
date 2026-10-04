@@ -1,0 +1,789 @@
+{
+  "calculated_columns": [],
+  "explicit_dax_measures": [],
+  "inspection_tool": "pbixray==0.15.5",
+  "pages": [
+    {
+      "name": "Page 1",
+      "page_id": "ac97a765dd2f4cf36c77",
+      "visuals": [
+        {
+          "select": [],
+          "type": "textbox",
+          "visual_id": "2adac8274f134d7f0669"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Crop"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "Min(crop_yield.Crop)",
+              "NativeReferenceName": "Count of Crop"
+            }
+          ],
+          "type": "card",
+          "visual_id": "2c53c46b2ab2b5f739d0"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Season"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "Min(crop_yield.Season)",
+              "NativeReferenceName": "Count of Season"
+            }
+          ],
+          "type": "card",
+          "visual_id": "5a02822bf3418684ea83"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Crop_Year"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "Sum(crop_yield.Crop_Year)",
+              "NativeReferenceName": "Count of Crop_Year"
+            }
+          ],
+          "type": "card",
+          "visual_id": "ee28af2722b78fbf36fa"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "State"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "Min(crop_yield.State)",
+              "NativeReferenceName": "Count of State"
+            }
+          ],
+          "type": "card",
+          "visual_id": "f94e355698d4dc7aadb5"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Annual_Rainfall (In mm)"
+              },
+              "Name": "Sum(crop_yield.Annual_Rainfall (In mm))",
+              "NativeReferenceName": "Annual_Rainfall (In mm)"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Production (In metric tons)"
+              },
+              "Name": "Sum(crop_yield.Production (In metric tons))",
+              "NativeReferenceName": "Production (In metric tons)"
+            }
+          ],
+          "type": "scatterChart",
+          "visual_id": "e0a8223e88c5da6410c4"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Annual_Rainfall (In mm)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Annual_Rainfall (In mm))",
+              "NativeReferenceName": "Average of Annual_Rainfall (In mm)"
+            }
+          ],
+          "type": "card",
+          "visual_id": "6bff29b2e2c834546865"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Pesticide (In kg)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Pesticide (In kg))",
+              "NativeReferenceName": "Average of Pesticide (In kg)"
+            }
+          ],
+          "type": "card",
+          "visual_id": "cdac2b943c8e47e758a3"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Production (In metric tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Production (In metric tons))",
+              "NativeReferenceName": "Sum of Production (In metric tons)"
+            }
+          ],
+          "type": "barChart",
+          "visual_id": "8923e2fc801509e5444a"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "58f82c9a4e39bb864dcb"
+        }
+      ]
+    },
+    {
+      "name": "Page 2",
+      "page_id": "c5c38146934c4d98ab73",
+      "visuals": [
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Yield"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Yield)",
+              "NativeReferenceName": "Average of Yield"
+            }
+          ],
+          "type": "columnChart",
+          "visual_id": "f9b78c119eb807e805ed"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Annual_Rainfall (In mm)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Annual_Rainfall (In mm))",
+              "NativeReferenceName": "Average of Annual_Rainfall (In mm)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Production (In metric tons)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Production (In metric tons))",
+              "NativeReferenceName": "Average of Production (In metric tons)"
+            }
+          ],
+          "type": "lineChart",
+          "visual_id": "4ceb5b0bf57a374a5fb6"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Crop"
+              },
+              "Name": "crop_yield.Crop",
+              "NativeReferenceName": "Crop"
+            }
+          ],
+          "type": "slicer",
+          "visual_id": "892d47fc3e0ba3d5616a"
+        }
+      ]
+    },
+    {
+      "name": "Page 3",
+      "page_id": "1c475bf6e80ddc265b39",
+      "visuals": [
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Crop_Year"
+              },
+              "Name": "crop_yield.Crop_Year",
+              "NativeReferenceName": "Crop_Year"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Production (In metric tons)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(crop_yield.Production (In metric tons))",
+              "NativeReferenceName": "Average of Production (In metric tons)"
+            }
+          ],
+          "type": "lineChart",
+          "visual_id": "5618fb33ad87fbe7819f"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            }
+          ],
+          "type": "slicer",
+          "visual_id": "5e7636f622550accbebb"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "State"
+                  }
+                },
+                "Function": 5
+              },
+              "Name": "CountNonNull(crop_yield.State)",
+              "NativeReferenceName": "Count of State"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Annual_Rainfall (In mm)"
+              },
+              "Name": "crop_yield.Annual_Rainfall (In mm)",
+              "NativeReferenceName": "Annual_Rainfall (In mm)"
+            }
+          ],
+          "type": "ribbonChart",
+          "visual_id": "2f92688716ff64890931"
+        }
+      ]
+    },
+    {
+      "name": "Page 4",
+      "page_id": "399bc2ba90ffb2298021",
+      "visuals": [
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Fertilizer (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Fertilizer (In kg))",
+              "NativeReferenceName": "Sum of Fertilizer (In kg)"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            }
+          ],
+          "type": "pieChart",
+          "visual_id": "852e044989fef616ca8f"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Crop"
+              },
+              "Name": "crop_yield.Crop",
+              "NativeReferenceName": "Crop"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Fertilizer (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Fertilizer (In kg))",
+              "NativeReferenceName": "Sum of Fertilizer (In kg)"
+            }
+          ],
+          "type": "donutChart",
+          "visual_id": "ef558bf188170dd2951f"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Crop"
+              },
+              "Name": "crop_yield.Crop",
+              "NativeReferenceName": "Crop"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Fertilizer (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Fertilizer (In kg))",
+              "NativeReferenceName": "Sum of Fertilizer (In kg)"
+            }
+          ],
+          "type": "donutChart",
+          "visual_id": "b658eec340a9b535e165"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Crop"
+              },
+              "Name": "crop_yield.Crop",
+              "NativeReferenceName": "Crop"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Pesticide (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Pesticide (In kg))",
+              "NativeReferenceName": "Sum of Pesticide (In kg)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Fertilizer (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Fertilizer (In kg))",
+              "NativeReferenceName": "Sum of Fertilizer (In kg)"
+            }
+          ],
+          "type": "donutChart",
+          "visual_id": "a57863a94aec2131af24"
+        }
+      ]
+    },
+    {
+      "name": "Page 5",
+      "page_id": "d4ef560ba7e254b4998b",
+      "visuals": [
+        {
+          "select": [],
+          "type": "keyDriversVisual",
+          "visual_id": "b7fcba0610ce9c7597da"
+        }
+      ]
+    },
+    {
+      "name": "Page 6",
+      "page_id": "6418cab81f6c4417a599",
+      "visuals": [
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "State"
+              },
+              "Name": "crop_yield.State",
+              "NativeReferenceName": "State"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Season"
+              },
+              "Name": "crop_yield.Season",
+              "NativeReferenceName": "Season"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Area (In hectares)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Area (In hectares))",
+              "NativeReferenceName": "Sum of Area (In hectares)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Annual_Rainfall (In mm)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Annual_Rainfall (In mm))",
+              "NativeReferenceName": "Sum of Annual_Rainfall (In mm)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Pesticide (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Pesticide (In kg))",
+              "NativeReferenceName": "Sum of Pesticide (In kg)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Fertilizer (In kg)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Fertilizer (In kg))",
+              "NativeReferenceName": "Sum of Fertilizer (In kg)"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Yield"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(crop_yield.Yield)",
+              "NativeReferenceName": "Sum of Yield"
+            }
+          ],
+          "type": "tableEx",
+          "visual_id": "d1e901b49a39d5d35ca6"
+        }
+      ]
+    }
+  ],
+  "pbix_sha256": "84c142e6dd8905e9b7e81c29af21878669594fb9b90537162638ca0f8b34a7ba",
+  "power_query_sanitized": [
+    {
+      "Expression": "let\n    Source = Csv.Document(File.Contents(\"<LOCAL_SOURCE_PATH_REDACTED>\"),[Delimiter=\",\", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Crop\", type text}, {\"Crop_Year\", Int64.Type}, {\"Season\", type text}, {\"State\", type text}, {\"Area\", Int64.Type}, {\"Production\", Int64.Type}, {\"Annual_Rainfall\", type number}, {\"Fertilizer\", type number}, {\"Pesticide\", type number}, {\"Yield\", type number}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Area\", \"Area (In hectares)\"}, {\"Production\", \"Production (In metric tons)\"}, {\"Annual_Rainfall\", \"Annual_Rainfall (In mm)\"}, {\"Fertilizer\", \"Fertilizer (In kg)\"}, {\"Pesticide\", \"Pesticide (In kg)\"}, {\"Yield\", \"Yield\"}})\nin\n    #\"Renamed Columns\"",
+      "TableName": "crop_yield"
+    }
+  ],
+  "relationships": [],
+  "schema": [
+    {
+      "ColumnName": "Crop",
+      "PandasDataType": "string",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Crop_Year",
+      "PandasDataType": "Int64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Season",
+      "PandasDataType": "string",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "State",
+      "PandasDataType": "string",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Area (In hectares)",
+      "PandasDataType": "Int64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Production (In metric tons)",
+      "PandasDataType": "Int64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Annual_Rainfall (In mm)",
+      "PandasDataType": "Float64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Fertilizer (In kg)",
+      "PandasDataType": "Float64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Pesticide (In kg)",
+      "PandasDataType": "Float64",
+      "TableName": "crop_yield"
+    },
+    {
+      "ColumnName": "Yield",
+      "PandasDataType": "Float64",
+      "TableName": "crop_yield"
+    }
+  ],
+  "tables": [
+    "crop_yield"
+  ]
+}
