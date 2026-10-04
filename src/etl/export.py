@@ -50,9 +50,7 @@ def export(rows: list[CropRow], output: Path, profile: dict[str, object]) -> dic
         "ratio_check_pass.csv": write_rows(output / "ratio_check_pass.csv", [r for r in rows if r.ratio_check_pass]),
         "ratio_mismatches.csv": write_rows(output / "ratio_mismatches.csv", [r for r in rows if not r.ratio_check_pass]),
     }
-    report = {**profile, "csv_sha256": hashes, "data_license": "CC BY-SA 4.0",
-              "data_creator": "Akshat Gupta (akshatgupta7)",
-              "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    report = {**profile, "csv_sha256": hashes,
               "changes": "Trimmed labels; mapped aliases; retained reported yields; added ratio/flags; sorted rows."}
     write_json(output / "validation_report.json", report)
     return report

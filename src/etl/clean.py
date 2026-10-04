@@ -29,7 +29,7 @@ class CropRow:
 
 
 def ratio_matches(reported: Decimal, calculated: Decimal, policy: Policy) -> bool:
-    """Symmetric math.isclose rule: absolute OR relative tolerance, not their sum."""
+    """Symmetric close rule in decimal arithmetic: absolute OR relative tolerance."""
     return abs(reported - calculated) <= max(
         policy.absolute_tolerance,
         policy.relative_tolerance * max(abs(reported), abs(calculated)),

@@ -20,6 +20,8 @@ def audit(source: Path, policy_path: Path, output: Path) -> dict[str, object]:
     rows = normalize(raw, policy)
     profile = validate(rows, policy)
     profile.update({"source_sha256": policy.data_sha256,
+                    "data_creator": policy.data_creator, "data_license": policy.data_license,
+                    "license_url": policy.license_url, "data_source_url": policy.data_source_url,
                     "policy_sha256": hashlib.sha256(policy_path.read_bytes()).hexdigest(),
                     "trimmed_label_rows": sum(any(r[k] != r[k].strip() for k in ("Crop", "Season", "State")) for r in raw)})
     return export(rows, output, profile)

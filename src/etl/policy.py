@@ -32,6 +32,10 @@ class Policy:
     allowed_states: tuple[str, ...]
     state_aliases: dict[str, str]
     data_sha256: str
+    data_creator: str
+    data_license: str
+    license_url: str
+    data_source_url: str
 
     @classmethod
     def load(cls, path: Path) -> "Policy":
@@ -69,7 +73,13 @@ class Policy:
             digest = config["data_sha256"]
             if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
                 raise DataError("Policy requires the exact input SHA256")
+            for field in ("data_creator", "data_license", "license_url", "data_source_url"):
+                value = config[field]
+                if not isinstance(value, str) or not value.strip():
+                    raise DataError(f"Policy {field} requires an explicit attribution value")
             return cls(relative, absolute, low, high, tuple(config["allowed_seasons"]),
-                       tuple(config["allowed_states"]), aliases, digest)
+                       tuple(config["allowed_states"]), aliases, digest,
+                       config["data_creator"], config["data_license"], config["license_url"],
+                       config["data_source_url"])
         except (KeyError, TypeError, json.JSONDecodeError) as exc:
             raise DataError("Malformed policy JSON") from exc
