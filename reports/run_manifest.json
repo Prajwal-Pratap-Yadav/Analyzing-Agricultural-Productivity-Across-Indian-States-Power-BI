@@ -1,7 +1,7 @@
 {
   "data_sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f",
-  "dirty_source_tree": true,
-  "generated_at_utc": "2026-10-04T06:45:58.411158+00:00",
+  "dirty_source_tree": false,
+  "generated_at_utc": "2026-10-04T07:03:06.139538+00:00",
   "generated_sha256": {
     "docs/assets/data-quality.png": "27850cebbf09004d8eabfb8cad19b7c8f115316757b2376ebd3d036c840189fa",
     "docs/data-dictionary.md": "a3ce43449f980ea0e312e9c86716bceccaeed953c33e81913842b16d4e0fabfb",
@@ -15,7 +15,7 @@
   "processor": "x86_64",
   "python": "3.12.14",
   "seed": "none; deterministic arithmetic",
-  "source_git_sha": "bed57a332574834e77edd73d5fdb91b2408151e3",
+  "source_git_sha": "22ba4abaf20862aa3fba35d49a9b175a15b6b3de",
   "versions": {
     "matplotlib": "3.11.2",
     "nbformat": "5.11.1"

@@ -1,0 +1,27 @@
+{
+  "source_git_sha": "22ba4abaf20862aa3fba35d49a9b175a15b6b3de",
+  "workflow_run_id": "37184492567",
+  "workflow_run_url": "https://github.com/Prajwal-Pratap-Yadav/Analyzing-Agricultural-Productivity-Across-Indian-States-Power-BI/actions/runs/37184492567",
+  "python": "3.12.14",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "versions": {
+    "pytest": "9.1.1",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.16.10",
+    "black": "26.5.1",
+    "mypy": "2.4.0",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1"
+  },
+  "tests": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coverage_percent": 99.57627118644068,
+  "coverage_scope": "src/etl; subprocess entry guard not covered; scripts/model/rendering excluded",
+  "source_data_sha256": "ab9bc356b1f8107d490376cec24450a0e2906322ad25788ab22fb32537ab1f8f",
+  "scope": "Real CPU audit/unit/end-to-end/reproduction run; no Power BI UI, refresh or DAX engine output validated."
+}
