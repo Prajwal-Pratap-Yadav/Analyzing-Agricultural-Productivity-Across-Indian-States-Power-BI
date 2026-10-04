@@ -13,12 +13,18 @@ class DataError(ValueError):
 
 def number(value: str, label: str) -> Decimal:
     """Read a finite nonnegative decimal, without a binary-float round trip."""
+    if len(value) > 64:
+        raise DataError(f"{label}: numeric text exceeds 64 characters")
     try:
         result = Decimal(value)
     except ArithmeticError as exc:
         raise DataError(f"{label}: expected a number") from exc
     if not result.is_finite() or result < 0:
         raise DataError(f"{label}: expected a finite nonnegative number")
+    if len(result.as_tuple().digits) > 28 or (result and not -18 <= result.adjusted() <= 18):
+        raise DataError(f"{label}: number exceeds the declared 28-digit / magnitude bounds")
+    if result == 0:
+        return Decimal(0)
     return result
 
 

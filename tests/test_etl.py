@@ -224,6 +224,19 @@ def test_fractional_area_is_never_coerced_to_integer(policy):
     assert row.production_per_area == Decimal(6) / Decimal("5.7")
 
 
+@pytest.mark.parametrize(
+    "value", ["1e999999", "1e-999999", "1" * 65, "12345678901234567890123456789"]
+)
+def test_extreme_finite_values_reject_before_arithmetic(policy, value):
+    with pytest.raises(DataError, match="bounds|64 characters"):
+        normalize([observation(Production=value)], policy)
+
+
+def test_zero_with_extreme_exponent_is_canonical_and_safe(policy):
+    row = normalize([observation(Production="0e999999", Yield="0")], policy)[0]
+    assert row.production == 0 and row.production_per_area == 0 and row.ratio_check_pass
+
+
 def test_packaged_demo_attribution_and_main(tmp_path, monkeypatch, capsys):
     from etl.__main__ import main
 
