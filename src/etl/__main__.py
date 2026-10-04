@@ -19,11 +19,19 @@ def audit(source: Path, policy_path: Path, output: Path) -> dict[str, object]:
     raw = read_csv(source, policy.data_sha256)
     rows = normalize(raw, policy)
     profile = validate(rows, policy)
-    profile.update({"source_sha256": policy.data_sha256,
-                    "data_creator": policy.data_creator, "data_license": policy.data_license,
-                    "license_url": policy.license_url, "data_source_url": policy.data_source_url,
-                    "policy_sha256": hashlib.sha256(policy_path.read_bytes()).hexdigest(),
-                    "trimmed_label_rows": sum(any(r[k] != r[k].strip() for k in ("Crop", "Season", "State")) for r in raw)})
+    profile.update(
+        {
+            "source_sha256": policy.data_sha256,
+            "data_creator": policy.data_creator,
+            "data_license": policy.data_license,
+            "license_url": policy.license_url,
+            "data_source_url": policy.data_source_url,
+            "policy_sha256": hashlib.sha256(policy_path.read_bytes()).hexdigest(),
+            "trimmed_label_rows": sum(
+                any(r[k] != r[k].strip() for k in ("Crop", "Season", "State")) for r in raw
+            ),
+        }
+    )
     return export(rows, output, profile)
 
 
@@ -33,7 +41,11 @@ def main() -> int:
     parser.add_argument("--input", type=Path, default=Path("data/raw/crop_yield.csv"))
     parser.add_argument("--policy", type=Path, default=Path("configs/policy.json"))
     parser.add_argument("--output", type=Path, default=Path("data/processed"))
-    parser.add_argument("--demo", action="store_true", help="Use the bundled synthetic fixture; not agricultural evidence")
+    parser.add_argument(
+        "--demo",
+        action="store_true",
+        help="Use the bundled synthetic fixture; not agricultural evidence",
+    )
     options = parser.parse_args()
     if options.demo:
         options.input = Path(str(files("etl").joinpath("fixtures/crop_sample.csv")))
@@ -43,8 +55,10 @@ def main() -> int:
     except (DataError, OSError) as exc:
         print(f"Audit rejected: {exc}", file=sys.stderr)
         return 2
-    print(f"{report['cleaned_rows']} rows retained; {report['ratio_mismatch_rows']} ratio mismatches; "
-          f"{report['ratio_check_pass_rows']} pass the arithmetic check.")
+    print(
+        f"{report['cleaned_rows']} rows retained; {report['ratio_mismatch_rows']} ratio mismatches; "
+        f"{report['ratio_check_pass_rows']} pass the arithmetic check."
+    )
     print(f"Outputs: {options.output}; per-crop physical units remain unverified.")
     return 0
 

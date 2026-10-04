@@ -8,8 +8,16 @@ from pathlib import Path
 from etl.policy import DataError
 
 HEADERS = (
-    "Crop", "Crop_Year", "Season", "State", "Area", "Production",
-    "Annual_Rainfall", "Fertilizer", "Pesticide", "Yield",
+    "Crop",
+    "Crop_Year",
+    "Season",
+    "State",
+    "Area",
+    "Production",
+    "Annual_Rainfall",
+    "Fertilizer",
+    "Pesticide",
+    "Yield",
 )
 
 
@@ -26,8 +34,9 @@ def read_csv(path: Path, expected_sha256: str) -> list[dict[str, str]]:
             raise DataError("CSV headers or their order differ from the ten-column schema")
         rows: list[dict[str, str]] = []
         for index, values in enumerate(reader, start=2):
-            if None in values or any(v is None or not isinstance(v, str) or not v.strip()
-                                     for v in values.values()):
+            if None in values or any(
+                v is None or not isinstance(v, str) or not v.strip() for v in values.values()
+            ):
                 raise DataError(f"CSV line {index}: missing, blank or surplus fields")
             rows.append({k: str(v) for k, v in values.items()})
         if not rows:

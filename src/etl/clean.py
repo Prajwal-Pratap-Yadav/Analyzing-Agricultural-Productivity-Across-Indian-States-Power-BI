@@ -50,17 +50,32 @@ def normalize(records: list[dict[str, str]], policy: Policy) -> list[CropRow]:
             raise DataError(f"CSV line {line}: crop year must be an integer") from exc
         if not policy.minimum_year <= year <= policy.maximum_year:
             raise DataError(f"CSV line {line}: crop year outside the configured coverage")
-        values = {k: number(row[k], f"CSV line {line}, {k}") for k in (
-            "Area", "Production", "Annual_Rainfall", "Fertilizer", "Pesticide", "Yield"
-        )}
+        values = {
+            k: number(row[k], f"CSV line {line}, {k}")
+            for k in ("Area", "Production", "Annual_Rainfall", "Fertilizer", "Pesticide", "Yield")
+        }
         if values["Area"] == 0:
             raise DataError(f"CSV line {line}: area must be positive")
         ratio = values["Production"] / values["Area"]
         boundary = (state == "Telangana" and year < 2014) or (
             state in {"Jharkhand", "Chhattisgarh", "Uttarakhand"} and year <= 2000
         )
-        result.append(CropRow(crop, year, season, state, raw_state, values["Area"],
-                              values["Production"], values["Annual_Rainfall"],
-                              values["Fertilizer"], values["Pesticide"], values["Yield"],
-                              ratio, ratio_matches(values["Yield"], ratio, policy), boundary))
+        result.append(
+            CropRow(
+                crop,
+                year,
+                season,
+                state,
+                raw_state,
+                values["Area"],
+                values["Production"],
+                values["Annual_Rainfall"],
+                values["Fertilizer"],
+                values["Pesticide"],
+                values["Yield"],
+                ratio,
+                ratio_matches(values["Yield"], ratio, policy),
+                boundary,
+            )
+        )
     return sorted(result, key=lambda row: row.grain)

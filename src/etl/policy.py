@@ -77,9 +77,19 @@ class Policy:
                 value = config[field]
                 if not isinstance(value, str) or not value.strip():
                     raise DataError(f"Policy {field} requires an explicit attribution value")
-            return cls(relative, absolute, low, high, tuple(config["allowed_seasons"]),
-                       tuple(config["allowed_states"]), aliases, digest,
-                       config["data_creator"], config["data_license"], config["license_url"],
-                       config["data_source_url"])
+            return cls(
+                relative,
+                absolute,
+                low,
+                high,
+                tuple(config["allowed_seasons"]),
+                tuple(config["allowed_states"]),
+                aliases,
+                digest,
+                config["data_creator"],
+                config["data_license"],
+                config["license_url"],
+                config["data_source_url"],
+            )
         except (KeyError, TypeError, json.JSONDecodeError) as exc:
             raise DataError("Malformed policy JSON") from exc
