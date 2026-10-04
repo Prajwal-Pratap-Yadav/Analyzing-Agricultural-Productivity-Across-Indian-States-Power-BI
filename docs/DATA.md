@@ -20,6 +20,8 @@ The ten-column original has 19,689 rows, 55 trimmed crop labels, 30 observed his
 
 ## Arithmetic policy
 
+Numeric text is limited to 64 characters and 28 significant digits; nonzero values must have a decimal adjusted exponent from -18 through 18. These transparent parser bounds prevent extreme finite values from overflowing ratio arithmetic. Every original numeric field falls within them (at most ten significant digits).
+
 The [policy](../configs/policy.json) declares decimal arithmetic at Python's default 28-digit precision and a symmetric tolerance:
 
 `abs(reported - production/area) <= max(0.01, 0.05 * max(abs(reported), abs(production/area)))`
