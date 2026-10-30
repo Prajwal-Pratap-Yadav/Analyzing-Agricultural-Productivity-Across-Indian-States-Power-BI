@@ -11,6 +11,8 @@ Reproduce quality checks and trace an original Indian crop Power BI report witho
 
 *Python re-creation, not a Power BI export. Data: Akshat Gupta, Kaggle v1, CC BY-SA 4.0.*
 
+**Review the project:** [code, tests, and evidence](docs/REVIEW_GUIDE.md).
+
 ## Why this matters
 
 - **Problem:** mixed crop units, yield definitions and historical boundaries can make polished agricultural dashboards misleading.
@@ -108,3 +110,4 @@ The verified matching Kaggle source is CC BY-SA 4.0. Primary government lineage,
 ## License, data and citation
 
 Original [MIT code licence](LICENSE) retained. The real dataset and distributed adaptations/figures use **CC BY-SA 4.0**, attributed to **Akshat Gupta**, with modification notes in [data/LICENSE.md](data/LICENSE.md); the code licence does not relicense the data. The wheel contains an explicitly synthetic MIT fixture. Cite software via [CITATION.cff](CITATION.cff) and credit the source dataset separately. [Security](SECURITY.md) and [conduct](CODE_OF_CONDUCT.md) policies apply to contributions.
+
